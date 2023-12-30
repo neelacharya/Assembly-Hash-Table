@@ -1,0 +1,13 @@
+USERNAME: achary21
+OPTIMIZATIONS USED
+1. Inlining of the hash function
+2. Using andq instead of idivq for all of the lookup and update test case
+3. making nBuckets powers of 2 for optimisation
+4. replacement of imulq with shlq to speed up the imulq
+5. Writing my own strcmp function which was then inlined
+
+Lookup-bench  TIME s.mmm
+hash-c     0m2.009s
+hash-asm   0m1.761s
+hash-op    0m1.255s
+
